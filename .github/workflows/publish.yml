@@ -1,0 +1,17 @@
+
+name: Publish
+on:
+  push:
+    branches: [main]
+    paths: ['nextjs-app-refactor/**']
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tesslio/setup-tessl@v2
+        with:
+          token: ${{ secrets.TESSL_TOKEN }}
+      - run: npx tessl tile publish
+        working-directory: nextjs-app-refactor

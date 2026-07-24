@@ -1,0 +1,8 @@
+{
+  "name": "nextjs-app-refactor",
+  "dependencies": {
+    "renmaiv/nextjs-app-refactor": {
+      "version": "0.1.0"
+    }
+  }
+}
